@@ -1,35 +1,23 @@
 Rails.application.routes.draw do
   
   namespace :admin do
-    get 'order_details/update'
+    resources :order_details, only: [:update]
   end
   namespace :admin do
-    get 'orders/show'
-    get 'orders/update'
+    resources :orders, only: [:show, :update]
   end
   namespace :admin do
-    get 'customers/index'
-    get 'customers/show'
-    get 'customers/edit'
-    get 'customers/update'
+    resources :customers, only: [:index, :show, :edit, :update]
   end
   namespace :admin do
-    get 'genres/index'
-    get 'genres/create'
-    get 'genres/edit'
-    get 'genres/update'
+    resources :genres, only: [:index, :create, :edit, :update]
   end
   namespace :admin do
-    get 'items/index'
-    get 'items/new'
-    get 'items/create'
-    get 'items/show'
-    get 'items/edit'
-    get 'items/update'
+    resources :items, only: [:index, :new, :edit, :create, :show, :update]
   end
-  namespace :admin do
-    get 'homes/top'
-  end
+  
+  get '/admin' => 'admin/homes#top', as: 'admin_home'
+  
   devise_for :admins, path: 'admin', controllers: {
     sessions:      'admin/sessions'
   }
