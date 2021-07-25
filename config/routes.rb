@@ -4,9 +4,9 @@ Rails.application.routes.draw do
     sessions:      'admin/sessions'
   }
   
-  devise_for :customers, path: 'public', controllers: {
-    registrations: 'customers/registrations',
-    sessions:      'customers/sessions'
+  devise_for :customers, controllers: {
+    registrations: 'public/registrations',
+    sessions:      'public/sessions'
   }
   
   root to: 'public#homes'
