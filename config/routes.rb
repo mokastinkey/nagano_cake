@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  #####################customer側##################
+  #####################public側##################
   
   #devise
    devise_for :customers, controllers: {
