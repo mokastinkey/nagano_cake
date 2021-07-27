@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   
   #item
   scope module: :public do
-    resource :items, only: [:index, :show]
+    resource :items, only: [:index, :show, :create]
   end
   
   #homes
