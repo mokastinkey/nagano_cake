@@ -1,2 +1,12 @@
-<h1>Admin::Customers#show</h1>
-<p>Find me in app/views/admin/customers/show.html.erb</p>
+<h2>会員詳細</h2>
+<%= @customer.id %>
+<%= @customer.full_name %>
+<%= @customer.last_name_kana %>
+<%= @customer.postal_code %>
+<%= @customer.address %>
+<%= @customer.telephone_number %>
+<%= @customer.email %>
+<%= @customer.is_active ? '有効' : '退会' %>
+<%= link_to edit_admin_customer_path(@customer.id) do %>
+編集する
+<% end %>
