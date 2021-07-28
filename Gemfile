@@ -67,3 +67,7 @@ gem 'devise'
 #画像投稿のため
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
+
+#enumのため
+gem 'rails-i18n'
+gem 'enum_help'
