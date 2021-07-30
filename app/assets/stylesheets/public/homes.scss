@@ -1,3 +1,59 @@
 // Place all the styles related to the public::homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333333;
+}
+
+.cover {
+  background-image: url(nagano_cake.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20rem;
+  position: relative;
+  top: -1rem;
+}
+
+.cover h1 {
+  top: 8rem;
+  right: 20rem;
+  position: absolute;
+  color: #fff;
+}
+
+.text-center {
+  margin-top: 5rem;
+}
+
+/* aboutページ */
+.main-visual {
+  width: 100%; /* 横幅いっぱい */
+  height: 300px; /* 高さ300px */
+  background-image: url(nagano_cake2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  top: -1rem;
+  position: relative;
+}
+
+.main-visual-content {
+  width: 40%; 
+  height: 200px; /* 親の高さに揃える */
+  background-color: rgba( 0, 0, 0, 0.5); /* 背景色を半透明の黒にする */
+  p {
+    color: #fff;
+    text-align: center;
+    padding-top: 55px;
+    font-size: 60px;
+  }
+}

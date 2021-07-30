@@ -13,3 +13,42 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+ @import 'font-awesome-sprockets';
+ @import 'font-awesome';
+ 
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333333;
+}
+ 
+ .field {
+  margin-bottom: 1rem;
+ }
+ 
+ .row {
+  margin-bottom: 1rem;
+ }
+ 
+ h5 {
+  margin: 3rem 0 3rem;
+ }
+ 
+ h5 span {
+  background-color: #dcdcdc;
+ }
+ 
+ .center {
+  text-align: center;
+  margin-top: 3rem;
+ }
+ 
+ .margin {
+  margin-top: 3rem;
+ }
+ 
+ #item_genre_id {
+  width: 11rem;
+ }

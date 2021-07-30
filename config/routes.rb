@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     resources :orders, only: [:index, :create, :show, :new] #order
     resources :cart_items, only: [:index, :update, :destroy, :create] #cart_item
     resource :customers, only: [:edit, :update] #customer
-    resource :items, only: [:index, :show, :create] #item
+    resources :items, only: [:index, :show] #item
   end
   
   #order
@@ -26,9 +26,10 @@ Rails.application.routes.draw do
   #customer
   get '/customers/unsubscribe' => 'public/customers#unsubscribe', as: 'unsubscribe_customer'
   patch '/customers/withdraw' => 'public/customers#withdraw', as: 'withdraw_customer'
+  get '/customers/my_page' => 'public/customers#show', as: 'customer_mypage'
   
   #homes
-  get '/about' => 'public/homes#top', as: 'about_page'
+  get '/about' => 'public/homes#about', as: 'about_page'
   
   #root
   root to: 'public/homes#top'

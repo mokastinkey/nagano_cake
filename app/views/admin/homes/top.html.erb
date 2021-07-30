@@ -1,2 +1,19 @@
-<h1>Admin::Homes#top</h1>
-<p>Find me in app/views/admin/homes/top.html.erb</p>
+<h2>注文履歴一覧(管理者トップページ)</h2>
+<table>
+  <thead>
+    <tr>
+      <td>購入日時</td>
+      <td>購入者</td>
+      <td>注文個数</td>
+      <td>注文ステータス</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr><%= order.created_at %></tr>
+      <tr><%= order.customer.full_name %></tr>
+      <tr><%= order.order_details.sum(:amount) %></tr>
+      <tr><%= order.status_i18n %></tr>
+    <% end %>
+  </tbody>
+</table>

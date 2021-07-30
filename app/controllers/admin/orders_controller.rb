@@ -1,4 +1,6 @@
 class Admin::OrdersController < ApplicationController
+layout "admin"
+
   def show
   end
 

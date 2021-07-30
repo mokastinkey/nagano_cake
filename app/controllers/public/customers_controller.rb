@@ -10,4 +10,8 @@ class Public::CustomersController < ApplicationController
 
   def withdraw
   end
+  
+  def show
+  end
+  
 end
